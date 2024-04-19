@@ -1,0 +1,37 @@
+
+
+create table [todo].[goal] 
+(
+    id int primary key identity(1,1)
+    , created_at datetime2(7) not null default sysdatetime()
+    , user_id int not null 
+    , goal nvarchar(1000) not null
+    , foreign key (user_id) references [todo].[user](id)
+)
+;
+
+insert into [todo].[goal] select sysdatetime(), 1, '100 Air-Squats'
+insert into [todo].[goal] select sysdatetime(), 1, '100 Push-ups'
+insert into [todo].[goal] select sysdatetime(), 1, '100 Sit-ups'
+insert into [todo].[goal] select sysdatetime(), 1, 'Brush/Play with Cats (15 minutes)'
+insert into [todo].[goal] select sysdatetime(), 1, 'Catch up at work'
+insert into [todo].[goal] select sysdatetime(), 1, 'Do Floors'
+insert into [todo].[goal] select sysdatetime(), 1, 'Do Litter in morning'
+insert into [todo].[goal] select sysdatetime(), 1, 'Dont eat processed food'
+insert into [todo].[goal] select sysdatetime(), 1, 'Drink Gallon of water (8 water bottles)'
+insert into [todo].[goal] select sysdatetime(), 1, 'Excercise (45 Minutes)'
+insert into [todo].[goal] select sysdatetime(), 1, 'Excercise (45 Minutes)  Fast'
+insert into [todo].[goal] select sysdatetime(), 1, 'Excercise (45 Minutes)  Fasted'
+insert into [todo].[goal] select sysdatetime(), 1, 'Fill Out Scorecard'
+insert into [todo].[goal] select sysdatetime(), 1, 'L.D.'
+insert into [todo].[goal] select sysdatetime(), 1, 'Look at Bank Accounts'
+insert into [todo].[goal] select sysdatetime(), 1, 'No Dishes in sink at end of day'
+insert into [todo].[goal] select sysdatetime(), 1, 'No unread emails at work'
+insert into [todo].[goal] select sysdatetime(), 1, 'Purge Coffe Table'
+insert into [todo].[goal] select sysdatetime(), 1, 'Purge Coffee Table'
+insert into [todo].[goal] select sysdatetime(), 1, 'Purge+Clean Landry Closet'
+insert into [todo].[goal] select sysdatetime(), 1, 'Read 20 Pages'
+insert into [todo].[goal] select sysdatetime(), 1, 'Read/Study Bible'
+insert into [todo].[goal] select sysdatetime(), 1, 'Run a Mile'
+insert into [todo].[goal] select sysdatetime(), 1, 'Write 1000 Words'
+insert into [todo].[goal] select sysdatetime(), 1, 'Write 500 Words'
