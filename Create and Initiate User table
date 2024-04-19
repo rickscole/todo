@@ -1,0 +1,11 @@
+create table [todo].[user] 
+(
+    id int primary key identity(1,1)
+    , created_at datetime2(7) not null default sysdatetime()
+    , first_name nvarchar(100) not null
+    , last_name nvarchar(100) not null
+    , email nvarchar(1000) not null
+)
+;
+
+insert into todo.[user] select sysdatetime(), 'Devon', 'Northway', 'devonjnorthway@gmail.com'
